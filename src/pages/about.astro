@@ -4,29 +4,80 @@ import Values from '../components/Values.astro';
 ---
 
 <PageLayout
-	title="About the studio"
-	description="We shape product, brand, and code for mission-driven teams."
-	eyebrow="Studio"
+	title="About Me"
+	description="I'm a pre-final year Engineering Student, Systems & Backend Developer, based in Chennai, India."
+	eyebrow="Balaji"
 >
 	<section class="content-shell py-12 space-y-8"> 
 		<div class="space-y-3 max-w-3xl">
-			<p class="m-0 text-ink text-2xl font-semibold leading-tight">We are a compact, senior studio blending research, design, and engineering to ship resilient products.</p>
-			<p class="m-0 text-muted">We stay close to the people using what we build: quick interviews, async notes, and instrumented releases. Decisions stay traceable so teams know why something shipped, not just what shipped.</p>
-			<p class="m-0 text-muted">When we embed with clients, we bring our own delivery discipline—strong briefs, scoped milestones, and demos that keep stakeholders aligned. The goal: fewer surprises, faster learning.</p>
+			<p class="m-0 text-ink text-2xl font-semibold leading-tight">Hi, I'm Balaji, a highly ambitious systems developer focused on low-level programming and backend architecture.</p>
+			<p class="m-0 text-muted">Currently a pre-final year engineering student based in Chennai, India, I dedicate my time to understanding the depths of modern operating systems, efficient memory management, and crafting performant networked applications.</p>
+			<p class="m-0 text-muted">Oh, and I use Arch Linux.</p>
 		</div>
 	</section>
 
-	<div class="mt-12 md:mt-16">
+	<div class="mt-12 md:mt-16 space-y-16">
+		<section class="max-w-3xl">
+			<header class="space-y-2 mb-8">
+				<p class="eyebrow m-0">Education</p>
+				<h2 class="text-3xl sm:text-4xl font-semibold leading-tight text-ink m-0">SRM Valliammai Engineering College</h2>
+			</header>
+			<div class="space-y-2">
+				<p class="text-lg font-medium text-ink m-0">B.Tech in AI and Data Science (CGPA: 8.23)</p>
+				<p class="text-sm text-muted m-0">Chennai, India | 2023 – 2027 (Expected)</p>
+			</div>
+		</section>
+
+		<section class="max-w-3xl">
+			<header class="space-y-2 mb-8">
+				<p class="eyebrow m-0">Experience</p>
+				<h2 class="text-3xl sm:text-4xl font-semibold leading-tight text-ink m-0">Work & Leadership</h2>
+			</header>
+			
+			<div class="space-y-10">
+				<div>
+					<h3 class="font-semibold text-xl text-ink m-0">Head of Marketing</h3>
+					<span class="text-base text-muted block mb-3">SRM VEC Campus E-Cell | Jul 2025 – Present</span>
+					<ul class="text-muted list-disc ml-5 space-y-2 marker:text-muted">
+						<li>Directed marketing campaigns and promotional initiatives for the Entrepreneurship Cell.</li>
+						<li>Leveraged entrepreneurship and marketing skills to increase student engagement and event participation.</li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-semibold text-xl text-ink m-0">Technical Leadership</h3>
+					<span class="text-base text-muted block mb-3">Hackathons & Events | Jul 2024 – Present</span>
+					<ul class="text-muted list-disc ml-5 space-y-2 marker:text-muted">
+						<li>Finalist in 3 inter-college hackathons (API and backend-focused).</li>
+						<li>Organized 2+ technical events with 100+ participants; led logistics and development setup.</li>
+						<li>Built and shipped a public project as part of GitHub’s global summer hackathon <i>For the Love of Code</i>.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
 		<Values
 			useShell={false}
-			eyebrow="Values"
-			title="How we show up"
-			copy="Principles we keep front-and-center so every project ships with the same intent and craft."
+			eyebrow="My Approach"
+			title="What I Value"
+			copy="The principles that guide my problem-solving and coding style."
 			values={[
-				{ title: 'Clarity over noise', description: 'We write, design, and code to be understood quickly by teams and customers.' },
-				{ title: 'Bias for shipping', description: 'We prefer small, validated releases over long bets that never reach users.' },
-				{ title: 'Craft with pragmatism', description: 'Quality matters most when it serves the outcome—polish meets purpose.' },
-				{ title: 'Partnership mindset', description: 'We behave like embedded teammates, not vendors: transparent, responsive, reliable.' },
+				{ title: 'Systematic Architecture', description: 'I design applications to be predictable, scalable, and easy to maintain.' },
+				{ title: 'Deep Dives', description: 'I don’t just use tools; I learn how they work under the hood.' },
+				{ title: 'Performance First', description: 'Writing efficient, lightweight code is always the priority.' },
+				{ title: 'Continuous Learning', description: 'Technology evolves rapidly, and I strive to adapt and learn just as quickly.' },
+			]}
+		/>
+
+		<Values
+			useShell={false}
+			eyebrow="Technical Skills"
+			title="My Stack"
+			copy="Technologies I work with to build robust systems."
+			values={[
+				{ title: 'Languages', description: 'Go, Java, Python' },
+				{ title: 'Frameworks', description: 'Spring Boot, Gin, FastAPI' },
+				{ title: 'Databases', description: 'PostgreSQL, MongoDB, SQL' },
+				{ title: 'Developer Tools', description: 'Linux (CLI), Postman, REST APIs, Git, GitHub' },
 			]}
 		/>
 	</div>
