@@ -11,7 +11,7 @@ const socials = defineCollection({
 });
 
 const projects = defineCollection({
-	loader: glob({ base: './src/content/projects', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/data/projects', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
