@@ -13,7 +13,14 @@ import icon from "astro-icon";
 export default defineConfig({
   site: "https://roicort.github.io",
   base: "/",
-  integrations: [mdx(), sitemap(), pagefind(), icon()],
+  integrations: [mdx(), sitemap(), pagefind(), icon({
+    include: {
+      logos: ["*"],
+      "simple-icons": ["*"],
+      tabler: ["*"],
+      lucide: ["*"]
+    }
+  })],
 
   vite: {
     plugins: [tailwindcss()],

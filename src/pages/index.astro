@@ -2,8 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
 import PostList from '../components/PostList.astro';
-import Numbers from '../components/Numbers.astro';
-import Values from '../components/Values.astro';
+import BentoGrid from '../components/home/BentoGrid.astro';
 import { getSite } from '../utils/consts';
 const site = await getSite();
 ---
@@ -12,43 +11,23 @@ const site = await getSite();
 	title={site.title}
 >
 	<Hero
-		eyebrow="Systems & Backend Developer"
-		title="Hi, I'm Balaji."
-		description="I'm a highly ambitious pre-final year Engineering Student focused on low-level systems, backend development, and a dedicated Arch Linux user."
+		eyebrow="Hi, I'm Balaji — a Systems Developer"
+		title="Engineering robust backend systems."
+		description="Highly ambitious pre-final year engineering student focused on low-level systems and backend development."
 		actions={[
-			{ label: 'View Projects', href: '/projects' },
-			{ label: 'Read Blog', href: '/blog' },
+			{ label: 'View Projects', href: '/projects', variant: 'primary' },
+			{ label: 'Read blog', href: '/blog', variant: 'ghost' },
 		]}
 	/>
 
-	<Numbers
-		eyebrow="Experience"
-		title="My Journey"
-		copy="A dedication to software engineering and low-level development."
-		stats={[
-			{ label: 'Role', value: 'Student', description: 'Pre-final year engineering.' },
-			{ label: 'Focus', value: 'Backend', description: 'Building scalable systems.' },
-			{ label: 'Interest', value: 'Low-level', description: 'Exploring the depths of systems.' },
-			{ label: 'OS', value: 'Arch', description: 'Btw, I use Arch Linux.' },
-		]}
-	/>
+	<BentoGrid />
 
-	<Values
-		eyebrow="Personality"
-		title="What drives me"
-		copy="Traits that define my approach to technology and engineering."
-		values={[
-			{ title: 'Highly ambitious', description: 'Always eager to learn and tackle complex architectural challenges.' },
-			{ title: 'Systematic approach', description: 'Focused on clean, robust, and maintainable backend systems.' },
-			{ title: 'Curiosity driven', description: 'Constantly dissecting how low-level systems function under the hood.' },
-			{ title: 'Dedicated', description: 'Persistent problem solver committed to delivering high-quality software.' },
-		]}
-	/>
-
-	<PostList
-		heading="Recent Posts"
-		limit={3}
-		viewAllHref="/blog"
-	/>
+	<div class="px-4">
+		<PostList
+			heading="Recent Writings"
+			limit={3}
+			viewAllHref="/blog"
+		/>
+	</div>
 
 </PageLayout>

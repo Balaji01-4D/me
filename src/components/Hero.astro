@@ -2,6 +2,7 @@
 interface Action {
 	label: string;
 	href: string;
+	variant?: 'primary' | 'secondary' | 'ghost';
 }
 
 interface Props {
@@ -16,16 +17,21 @@ import { withBase } from '../utils/slugify';
 const { eyebrow, title, description, actions = [] } = Astro.props;
 ---
 
-<section class="content-shell flex items-center">
-	<div class="grid gap-4 max-w-3xl">
-		{eyebrow && <p class="eyebrow">{eyebrow}</p>}
-		<h1 class="text-4xl md:text-5xl lg:text-6xl leading-tight m-0">{title}</h1>
-		{description && <p class="text-muted text-base md:text-lg max-w-2xl m-0">{description}</p>}
+<section class="content-shell flex items-center justify-center text-center relative max-w-none! w-full px-4 overflow-hidden border-b border-border">
+	<div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px), linear-gradient(to right, var(--grid-line) 1px, transparent 1px); background-size: var(--grid-cell) var(--grid-cell); mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"></div>
+	<div class="grid gap-4 max-w-3xl place-items-center relative z-10 pt-16 pb-24">
+		{eyebrow && <p class="eyebrow mb-2">{eyebrow}</p>}
+		<h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight m-0 [text-wrap:balance]">{title}</h1>
+		{description && <p class="text-muted/90 text-base md:text-xl font-medium max-w-2xl m-0 mt-1">{description}</p>}
 		{actions.length > 0 && (
-			<div class="flex flex-wrap gap-3 mt-3">
+			<div class="flex flex-wrap justify-center items-center gap-4 mt-6">
 				{actions.map((action) => (
-					<a class="button primary" href={withBase(action.href)}>
+					<a 
+						class={`button group ${action.variant === 'ghost' ? 'ghost-link' : action.variant || 'primary'}`} 
+						href={withBase(action.href)}
+					>
 						{action.label}
+						{action.variant === 'ghost' && <span class="ml-1 opacity-70 group-hover:opacity-100 transition-opacity">&rsaquo;</span>}
 					</a>
 				))}
 			</div>
@@ -42,5 +48,24 @@ const { eyebrow, title, description, actions = [] } = Astro.props;
 		.content-shell {
 			min-height: calc(100vh - calc(var(--grid-cell) * 4));
 		}
+	}
+
+	.ghost-link {
+		background: transparent !important;
+		border-color: transparent !important;
+		color: var(--color-ink);
+		padding: 0.65rem 0.5rem;
+		text-transform: none;
+		letter-spacing: normal;
+		font-weight: 500;
+		font-size: 1.05rem;
+	}
+	
+	.ghost-link:hover {
+		color: var(--color-ink);
+		background: transparent !important;
+		border-color: transparent !important;
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 </style>

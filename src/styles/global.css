@@ -23,7 +23,7 @@
 		--color-paper: #f9f9f9;
 		--color-surface: #ffffff;
 		--color-border: color-mix(in oklab, var(--color-ink) 14%, transparent);
-		--grid-line: color-mix(in oklab, var(--color-ink) 10%, transparent);
+		--grid-line: color-mix(in oklab, var(--color-ink) 4%, transparent);
 	}
 
 	:root[data-theme="dark"] {
@@ -33,7 +33,7 @@
 		--color-paper: #0d0d10;
 		--color-surface: #131318;
 		--color-border: color-mix(in oklab, var(--color-ink) 16%, transparent);
-		--grid-line: color-mix(in oklab, var(--color-ink) 10%, transparent);
+		--grid-line: color-mix(in oklab, var(--color-ink) 4%, transparent);
 	}
 
 	:root[data-theme="blue"] {
@@ -43,7 +43,7 @@
 		--color-paper: #0f1b3f;
 		--color-surface: #0f1b3f;
 		--color-border: color-mix(in oklab, var(--color-ink) 18%, transparent);
-		--grid-line: color-mix(in oklab, var(--color-ink) 12%, transparent);
+		--grid-line: color-mix(in oklab, var(--color-ink) 5%, transparent);
 	}
 
 	*,
@@ -60,11 +60,7 @@
 		font-family: var(--font-sans);
 		line-height: 1.6;
 		color: var(--color-ink);
-		background-color: var(--color-paper);
-		background-image:
-			linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
-			linear-gradient(to right, var(--grid-line) 1px, transparent 1px);
-		background-size: var(--grid-cell) var(--grid-cell);
+		background-color: var(--color-surface);
 	}
 
 	a {
