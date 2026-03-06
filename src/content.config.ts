@@ -51,6 +51,9 @@ const projects = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			heroImage: image().optional(),
 			tags: z.array(z.string()).default([]),
+			stack: z.array(z.string()).optional(),
+			github: z.string().url().optional(),
+			docs: z.string().url().optional(),
 		}),
 });
 
