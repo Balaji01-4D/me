@@ -2,7 +2,7 @@
 title: My Dear Bug
 description: A community platform for sharing and discovering real-world debugging confessions.
 pubDate: 2025-08-10
-heroImage: ../../assets/blog-placeholder-5.png
+heroImage: ../../assets/placeholder-5.png
 stack: ["Go", "Gin", "PostgreSQL", "GORM"]
 github: "https://github.com/Balaji01-4D/my-dear-bug"
 ---

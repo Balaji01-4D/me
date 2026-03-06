@@ -2,7 +2,7 @@
 title: Meine
 description: A Python-based cross-platform TUI with async file operations and real-time system widgets. 
 pubDate: 2026-02-15
-heroImage: ../../assets/blog-placeholder-3.png
+heroImage: ../../assets/placeholder-3.png
 stack: ["Python", "Textual", "asyncio", "aiofiles"]
 github: "https://github.com/Balaji01-4D/meine"
 ---

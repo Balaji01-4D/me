@@ -1,6 +1,6 @@
 # Astro Launchpad
 
-An Astro starter tailored for agencies and studios: MDX blog, global search, RSS, sitemap, light/dark/blue themes, and components ready to sell services or publish content.
+An Astro starter tailored for agencies and studios: global search, RSS, sitemap, light/dark/blue themes, and components ready to sell services or publish content.
 
 ![](./public/SS-1.png)
 
@@ -10,7 +10,6 @@ An Astro starter tailored for agencies and studios: MDX blog, global search, RSS
 
 ## Features
 - [Lighthouse Score: 100](https://pagespeed.web.dev/analysis/https-roicort-github-io-launchpad/xthz1r5i4v?form_factor=mobile)
-- Blog with Markdown/MDX, featured post, and tag listings
 - Typed collections for posts, authors, and socials in [src/content.config.ts](src/content.config.ts)
 - Site-wide search via Pagefind with an accessible modal
 - SEO-ready: OpenGraph/Twitter, canonical links, and preloaded fonts in [src/components/BaseHead.astro](src/components/BaseHead.astro)
@@ -47,7 +46,6 @@ bun run preview
 ```
 
 ## Content
-- Posts: add `.md` or `.mdx` under `src/content/blog`. Schema validates `title`, `description`, `pubDate`, `updatedDate?`, `heroImage?`, `tags[]`.
 - Authors: `src/content/authors.yml`.
 - Socials: `src/content/socials.yml`.
 
@@ -59,7 +57,7 @@ description: "End-to-end process for small teams."
 pubDate: 2024-12-12
 updatedDate: 2025-01-03
 tags: [delivery, process]
-heroImage: ../../assets/blog/ship.jpg
+heroImage: ../../assets//ship.jpg
 ---
 ```
 

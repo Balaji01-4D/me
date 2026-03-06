@@ -1,7 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
-import PostList from '../components/PostList.astro';
 import BentoGrid from '../components/home/BentoGrid.astro';
 import { getSite } from '../utils/consts';
 const site = await getSite();
@@ -16,18 +15,12 @@ const site = await getSite();
 		description="Highly ambitious pre-final year engineering student focused on low-level systems and backend development."
 		actions={[
 			{ label: 'View Projects', href: '/projects', variant: 'primary' },
-			{ label: 'Read blog', href: '/blog', variant: 'ghost' },
+			{ label: 'Contact', href: '/contact', variant: 'ghost' },
 		]}
 	/>
 
 	<BentoGrid />
 
-	<div class="px-4">
-		<PostList
-			heading="Recent Writings"
-			limit={3}
-			viewAllHref="/blog"
-		/>
-	</div>
+	
 
 </PageLayout>

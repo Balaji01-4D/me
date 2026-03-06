@@ -2,7 +2,7 @@
 title: EcoAware
 description: Production-ready REST API with RBAC and JWT-based authentication using Spring Security best practices.
 pubDate: 2025-11-20
-heroImage: ../../assets/blog-placeholder-4.png
+heroImage: ../../assets/placeholder-4.png
 stack: ["Spring Boot", "PostgreSQL", "JWT"]
 github: "https://github.com/Balaji01-4D/ecoaware"
 ---
