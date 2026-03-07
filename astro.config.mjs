@@ -11,8 +11,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://roicort.github.io",
-  base: "/",
+  site: "https://balaji01-4d.github.io",
+  base: "/portfolio",
   integrations: [mdx(), sitemap(), pagefind(), icon({
     include: {
       logos: ["*"],

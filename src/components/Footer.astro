@@ -1,5 +1,6 @@
 ---
 import { getSite } from '../utils/consts';
+import { withBase } from '../utils/slugify';
 import { getCollection } from 'astro:content';
 
 const site = await getSite();
@@ -33,9 +34,9 @@ const iconMap: Record<string, string> = {
       <div class="space-y-4 md:mx-auto">
         <p class="text-xs font-semibold tracking-[0.05em] uppercase text-muted">Navigation</p>
         <div class="flex flex-col gap-2 text-sm text-ink">
-          <a class="transition-colors hover:text-muted" href="/">Home</a>
-          <a class="transition-colors hover:text-muted" href="/about">About</a>
-          <a class="transition-colors hover:text-muted" href="/projects">Projects</a>
+          <a class="transition-colors hover:text-muted" href={withBase('/')}>Home</a>
+          <a class="transition-colors hover:text-muted" href={withBase('/about')}>About</a>
+          <a class="transition-colors hover:text-muted" href={withBase('/projects')}>Projects</a>
         </div>
       </div>
 
