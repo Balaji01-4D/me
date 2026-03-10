@@ -20,13 +20,10 @@ const subpath = import.meta.env.BASE_URL;
         <h1
           class="text-base font-semibold uppercase m-0 [html[data-nav='open']_&]:text-center"
         >
-          <a href={subpath} aria-label={site.title}>
-            <Icon
-              name="tabler:rocket"
-              size="2em"
-              class="inline-block mr-3 align-middle"
-              aria-hidden="true"
-            />
+          <a href={subpath} aria-label={site.title} class="flex items-center gap-3">
+            <div class="inline-flex items-center justify-center w-8 h-8 rounded bg-ink text-surface font-bold text-lg leading-none" aria-hidden="true">
+              B
+            </div>
             <span class="hidden md:inline">{site.title}</span>
           </a>
         </h1>
